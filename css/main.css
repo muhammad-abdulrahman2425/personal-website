@@ -1,0 +1,430 @@
+/* content: "\f0c9"; */
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+:root {
+   --main-color: #ded5ae;
+}
+html {
+   scroll-behavior: smooth;
+   scroll-padding-top: 56px;
+}
+.main-heading {
+   padding-top: 70px;
+   padding-bottom: 100px;
+   text-align: center;
+}
+.main-heading h2 {
+   font-size: 40px;
+   text-transform: uppercase;
+   position: relative;
+}
+.main-heading h2::before {
+   position: absolute;
+   content: "";
+   height: 2px;
+   width: 200px;
+   bottom: -20px;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: black;
+}
+.main-heading h2::after {
+   position: absolute;
+   content: "";
+   height: 2px;
+   width: 150px;
+   bottom: -35px;
+   left: 50%;
+   transform: translateX(-50%);
+   background-color: black;
+}
+.container {
+   padding-left: 15px;
+   padding-right: 15px;
+   margin-right: auto;
+   margin-left: auto;
+}
+@media (min-width: 768px) {
+   .container {
+      width: 750px;
+   }
+}
+@media (min-width: 992px) {
+   .container {
+      width: 970px;
+   }
+}
+@media (min-width: 1200px) {
+   .container {
+      width: 1170px;
+   }
+}
+/* start header */
+header {
+   position: fixed;
+   width: 100%;
+   z-index: 5;
+}
+header .container {
+   display: flex;
+   align-items: center;
+   position: relative;
+   background: none;
+}
+header .container::before {
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0 0 0 / 30%);
+}
+header .box {
+   display: flex;
+   align-items: center;
+   width: 100%;
+   position: static;
+}
+.container .image {
+   padding: 15px;
+   color: white;
+   font-size: 22px;
+   font-weight: bold;
+}
+.container .image a {
+   color: var(--main-color);
+   text-decoration: none;
+   position: relative;
+}
+.container nav {
+   flex: 1;
+   display: flex;
+   justify-content: flex-end;
+}
+header nav .toggle-menu {
+   padding: 10px;
+   margin-right: 10px;
+}
+@media (min-width: 768px) {
+   header nav .toggle-menu {
+      display: none;
+   }
+}
+header nav .toggle-menu div {
+   width: 15px;
+   height: 3px;
+   background-color: white;
+   margin-bottom: 3px;
+   border-radius: 20%;
+   position: relative;
+}
+header nav ul {
+   list-style: none;
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   flex: 1;
+}
+@media (max-width: 767px) {
+   header nav ul {
+      display: none;
+   }
+   header nav .toggle-menu:hover + ul {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      background-color: rgb(0 0 0 / 50%);
+      width: 100%;
+      left: 0;
+      top: 100%;
+   }
+   header nav .toggle-menu:hover + ul li {
+      width: 100%;
+   }
+}
+header nav ul li {
+   padding: 10px 20px;
+   position: relative;}
+header nav ul li a {
+   text-decoration: none;
+   font-weight: bold;
+   color: white;
+   font-size: 18px;
+   transition: 0.3s;
+}
+header nav ul li a:hover,
+header nav ul li a:focus {
+   font-size: 22px;
+   padding-left: 10px;
+}
+/* end header */
+/* start landing */
+.landing {
+   height: 100vh;
+   background-image: url(../images/landing.jpg);
+   background-size: cover;
+   position: relative;
+}
+.landing::before {
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0 0 0 / 30%);
+}
+.landing .container {
+   position: relative;
+   height: 100%;
+}
+.landing .container .text {
+   position: relative;
+   height: 100%;
+}
+.landing .container .text p {
+   font-size: 50px;
+   line-height: 2;
+   color: var(--main-color);
+   position: absolute;
+   top: 5%;
+}
+.landing .container .text div {
+   font-size: 30px;
+   word-spacing: 2px;
+   letter-spacing: 2px;
+   width: 100%;
+   text-align: center;
+   color: white;
+   position: absolute;
+   bottom: 25%;
+}
+@media (min-width: 768px) {
+   .landing .container .text p {
+      font-size: 50px;
+      line-height: 2;
+      color: var(--main-color);
+      position: relative;
+      top: 25%;
+      left: 18%;
+   }
+   .landing .container .text div {
+      font-size: 26px;
+      word-spacing: 2px;
+      letter-spacing: 2px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      position: absolute;
+      bottom: 25%;
+   }
+}
+@media (min-width: 992px) {
+   .landing .container .text p {
+      font-size: 70px;
+      top: 12%;
+      left: 10%;
+   }
+   .landing .container .text div {
+      font-size: 35px;
+   }
+}
+@media (min-width: 1200px) {
+   .landing .container .text p {
+      font-size: 100px;
+      left: 0%;
+   }
+   .landing .container .text div {
+      font-size: 60px;
+   }
+}
+.landing .container .text div span {
+   font-size: 40px;
+   color: var(--main-color);
+}
+/* end landing */
+/* start about */
+.about {
+   height: 450px;
+   background-color: #eee;
+}
+.about .content {
+   display: flex;
+   flex-direction: row-reverse;
+   align-items: center;
+   justify-content: space-around;
+}
+.about .content p {
+   width: 60%;
+   font-size: 24px;
+   color: #333;
+}
+.about .content .image img {
+   border: 1px solid transparent;
+   border-radius: 50%;
+   width: 130px;
+   height: 130px;
+}
+/* end about */
+/* start portfolio */
+.portfolio {
+   height: 80vh;
+   background-color: rgb(99, 28, 28);
+}
+.portfolio p {
+   text-align: center;
+   font-size: 150px;
+   text-transform: uppercase;
+}
+@media (max-width: 767px) {
+   .portfolio p {
+      font-size: 75px;
+   }
+   .portfolio {
+      height: 60vh;
+   }
+}
+/* end portfolio */
+/* start skills */
+.skills {
+   height: 450px;
+   background-color: #1b1e10;
+   color: var(--main-color);
+   background-image: url(../images/skills.png);
+   position: relative;
+}
+.skills::before {
+   position: absolute;
+   content: "";
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgb(0 0 0 / 30%);
+}
+.skills p {
+   font-size: 50px;
+   text-transform: capitalize;
+   position: absolute;
+}
+.skills p:first-of-type {
+   top: 100px;
+   left: 20px;
+}
+.skills p:nth-of-type(2) {
+   bottom: 100px;
+   right: 20px;
+}
+@media (max-width: 767px) {
+   .skills {
+      height: 250px;
+   }
+   .skills p {
+      font-size: 30px;
+      padding: 10px;
+   }
+   .skills p:first-of-type {
+      top: 30px;
+   }
+   .skills p:nth-of-type(2) {
+      bottom: 30px;
+   }
+}
+/* end skills */
+/* start contact */
+.contact {
+   height: 60vh;
+   background-color: #f6f6f6;
+}
+.contact .content {
+   display: flex;
+   justify-content: space-around;
+}
+.contact .content .mails {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.contact .content .mails .gmail h3 {
+   text-transform: capitalize;
+   font-size: 26px;
+   margin-bottom: 30px;
+   font-weight: 400;
+}
+.contact .content .mails .gmail a {
+   text-decoration: none;
+   color: #777;
+   display: block;
+   margin-bottom: 15px;
+   font-size: 20px;
+}
+.contact .content .mails .socials {
+   text-align: center;
+}
+.contact .content .mails .socials i {
+   padding: 10px;
+   font-size: 20px;
+}
+.contact .content .phones h3 {
+   text-transform: capitalize;
+   font-size: 26px;
+   margin-bottom: 30px;
+   font-weight: 400;
+}
+.contact .content .phones a {
+   text-decoration: none;
+   color: #777;
+   display: block;
+   margin-bottom: 15px;
+   font-size: 20px;
+}
+@media (max-width: 767px) {
+   .contact {
+      height: 75vh;
+   }
+   .contact .content {
+      flex-direction: column;
+   }
+   .contact .content .mails {
+      margin-bottom: 70px;
+   }
+   .contact .content {
+      text-align: center;
+   }
+}
+/* end contact */
+/* start footer */
+footer {
+   background-image: url(../images/skills.png);
+   background-size: cover;
+   height: 100px;
+   text-align: center;
+}
+
+footer p {
+    position: relative;
+    transform: translateY(50%);
+    color: white;
+    font-size: 30px;
+}
+footer p span {
+   color: var(--main-color);
+   font-size: 36px;
+}
+@media (max-width: 767px) {
+   footer {
+      height: 70px;
+   }
+   footer p {
+      font-size: 18px;
+   }
+   footer p span {
+      font-size: 28px;
+   }
+}
+/* end footer */
+
